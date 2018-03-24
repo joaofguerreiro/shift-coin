@@ -57,3 +57,14 @@ typings/
 # dotenv environment variables file
 .env
 
+# Error logs from Hyperledger Composer
+composer-logs/
+
+# Network admin cards
+*.card
+
+# Editor Specific
+*.sublime-workspace
+.sublime-project
+.idea/
+.vscode/
