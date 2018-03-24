@@ -1,6 +1,6 @@
 version: '3'
 services: 
-  payground:
+  playground:
     image: hyperledger/composer-playground:latest
     ports:
       - '8080:8080'
