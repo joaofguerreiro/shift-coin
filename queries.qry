@@ -1,0 +1,14 @@
+/** Basic queries for our Shift Coin network
+*/
+
+query selectParticipants {
+    description: "Select all users"
+    statement:
+        SELECT org.shiftfaro.ShiftParticipant
+}
+
+query selectParticipantsByName {
+  description: "Select all participants based on their first name"
+  statement:
+      SELECT org.shiftfaro.ShiftParticipant WHERE (firstName ==_$firstName)
+}

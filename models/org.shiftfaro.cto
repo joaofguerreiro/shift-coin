@@ -1,0 +1,25 @@
+/**
+ * Shift Faro network definition.
+ */
+namespace org.shiftfaro
+
+asset ShiftCoin identified by assetId {
+  o String assetId
+  --> ShiftParticipant owner
+}
+
+participant ShiftParticipant identified by participantId {
+  o String participantId
+  o String firstName
+  o String lastName
+}
+
+transaction CoinTransaction {
+  --> ShiftCoin coin
+  --> ShiftParticipant newOwner
+}
+
+event TransactionEvent {
+  --> ShiftCoin coin
+  --> ShiftParticipant newOwner
+}
